@@ -1,0 +1,11 @@
+__pycache__?
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+env/
+tasks.db
+*.sqlite3
+.idea/
+.DS_Store
