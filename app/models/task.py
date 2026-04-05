@@ -1,5 +1,7 @@
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, DateTime
 from app.database import Base
+
+from datetime import datetime
 
 class Task(Base):
 
@@ -8,5 +10,7 @@ class Task(Base):
  title = Column(String)
  description = Column(String)
  completed = Column(Boolean, default=False)
+
+ created_at = Column(DateTime, default=datetime.utcnow)
 
  user_id = Column(Integer, ForeignKey("users.id"))
